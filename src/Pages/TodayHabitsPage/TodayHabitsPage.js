@@ -63,7 +63,7 @@ export default function TodayHabitsPage ({url}){
             <Date data-test="today">{weekDays[weekDay]}, {date}</Date>
 
             <SubTitle data-test="today-counter" userHabits={userHabits.length} doneHabits={doneHabits}>
-                {(userHabits.length === 0 || doneHabits === 0) ? (
+                {(userHabits.length === "0" || doneHabits === "0") ? (
                     "Nenhum hábito concluído ainda"
                 ) : (
                     `${doneHabits}% dos hábitos concluídos`
@@ -107,5 +107,5 @@ const SubTitle = styled.div`
     font-size: 17.976px;
     line-height: 22px;
     margin-bottom: 28px;
-    color: ${props => (props.userHabits === 0 || props.doneHabits === 0) ? '#BABABA' : '#8FC549'};
+    color: ${props => (props.userHabits === "0" || props.doneHabits === "0") ? '#BABABA' : '#8FC549'};
 `

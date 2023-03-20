@@ -51,7 +51,7 @@ export default function ContainerHabit ({url}){
         
         <Container>
             {userHabits.map ((habit) => (   
-                <Habit  data-test="today-habit-container" key={habit.id} record={() => record (habit)}>
+                <Habit  data-test="today-habit-container" key={habit.id} record={record (habit)}>
                     <h1 data-test="today-habit-name">{habit.name}</h1>
                     <div>
                         <h2 data-test="today-habit-sequence">Sequência atual: <span>{habit.currentSequence} dias</span></h2>
